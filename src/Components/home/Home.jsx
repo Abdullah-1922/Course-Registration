@@ -7,7 +7,8 @@ import swal from 'sweetalert';
 const Home = () => {
   const [Courses, setCourses] = useState([]);
   const [selectedCourses, setSelectedCourses] = useState([]);
-  const [totalCredit ,setTotalCredit]=useState(0)
+  const [totalCredit ,setTotalCredit]=useState(0);
+  const [totalremaning ,setTotalremaning]=useState(20)
   useEffect(() => {
     fetch('./data.json')
       .then((res) => res.json())
@@ -29,12 +30,18 @@ let totalCredit = parseInt(selectedCourse.Credit);
         selectedCourses.forEach(item=>{
             totalCredit+= parseInt(item.Credit)
         })
+        let totalremanning = 20 - totalCredit 
        if(totalCredit>20){
         return swal('Limit is 20hr', '', 'error');
-       }
-       setTotalCredit(totalCredit);
+       }     
+       setTotalCredit(totalCredit); 
+       
+            
+       setTotalremaning(totalremanning)
+  console.log(totalremanning);
       const newSelectedCourse = [...selectedCourses, selectedCourse];
       setSelectedCourses(newSelectedCourse);
+      
     }
   };
 
@@ -51,8 +58,10 @@ let totalCredit = parseInt(selectedCourse.Credit);
       <div className='w-[30%] md:w-1/4 pl-1 lg:pl-14'>
         <SelectedCourse
         totalCredit={totalCredit}
-         selectedCourses={selectedCourses}>
-
+         selectedCourses={selectedCourses}
+         totalremaning={totalremaning}
+         >
+       
          </SelectedCourse>
       </div>
     </div>
