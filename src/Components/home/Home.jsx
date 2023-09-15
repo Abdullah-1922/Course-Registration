@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import Course from '../Course/Course';
 import SelectedCourse from '../selectedCourse/SelectedCourse';
+import swal from 'sweetalert';
 
 const Home = () => {
   const [Courses, setCourses] = useState([]);
@@ -15,7 +16,7 @@ const [selectedCourses,setSelectedCourses]=useState([])
   const handleSelected =(selectedCourse)=>{
  const alreadyExist = selectedCourses.find(course => course.Title == selectedCourse.Title)
  if(alreadyExist){
-   return alert('fffff')
+   return swal("Already selected", "", "error");
 }else{
     const newSelectedCourse =[...selectedCourses,selectedCourse]
       setSelectedCourses(newSelectedCourse)}
