@@ -46,7 +46,7 @@ let totalCredit = parseInt(selectedCourse.Credit);
   };
 
   return (
-    <div className='container mx-auto flex gap-4'>
+    <div className='container mx-auto flex gap-4 pb-[100px]'>
       <div className='grid gap-10 w-[70%] md:w-3/4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {Courses.map((course) => (
           <Course

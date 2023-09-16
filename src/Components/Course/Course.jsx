@@ -7,10 +7,10 @@ import { faDollarSign ,faBookOpen} from '@fortawesome/free-solid-svg-icons'
 const Course = ({ Courses ,handleSelected}) => {
   return (
     
-      <div className='card bg-base-100 shadow-xl'>
+      <div className='card bg-slate-300 shadow-xl'>
         <figure>
           <img
-          className="w-full"
+          className="w-full h-[200px]"
             src={Courses.img}
             alt=''
           />

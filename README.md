@@ -1,8 +1,7 @@
-# React + Vite
+→ Three Project Features-
+•There are different select button for each course cart.
+•User will get sweet alert when they select one course double .
+•User will get sweet alert when they cross the limit of total credit.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+→ How I manage the state in my assignment project.
+• The useState is use for store my data and update according my function.
